@@ -47,7 +47,7 @@ max-cards: 5
 
 @party
 title: Party Affairs
-card-image: out/html/img/portraits/kcp_partyaffairs1.jpg
+card-image: img/portraits/kcp_partyaffairs1.jpg
 is-deck: true
 
 - #party_affairs
@@ -55,7 +55,7 @@ is-deck: true
 @govt
 title: Government Affairs
 view-if: time >= 6
-card-image: 
+card-image: img/portraits/govaffairs.png
 is-deck: true
 
 - #govt_affairs
