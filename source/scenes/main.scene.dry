@@ -10,7 +10,7 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
 !}
-max-cards: 3
+max-cards: 5
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
@@ -33,11 +33,11 @@ if (Q.advisor_action_timer <= 0) {
     Q.pinnedCardsDescription = 'Advisors - next action available in ' + Q.advisor_action_timer + ' months.';
 }
 !}
-max-cards: 4
+max-cards: 5
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 1928 and month = 2 : The current bourgeois-right government has fallen. The next elections are slated for May of this year. ?]
+[? if year = 1928 and month = 2 : The monarchy has fallen as a result of a Guran boycot a republican constitution has been signed and a new party of fresh blood the Kadjan Constitutionalist Party (Thats us) is quickly making waves in the political space as they try to rise in prominence. ?]
 
 - @party
 - @govt
@@ -47,7 +47,7 @@ max-cards: 4
 
 @party
 title: Party Affairs
-card-image: img/Vorwaerts_nr_1.png
+card-image: img/kcp_partyaffairs.PNG
 is-deck: true
 
 - #party_affairs
@@ -55,7 +55,7 @@ is-deck: true
 @govt
 title: Government Affairs
 view-if: time >= 6
-card-image: img/reichstag_2.jpg
+card-image: govaffairs.png
 is-deck: true
 
 - #govt_affairs
