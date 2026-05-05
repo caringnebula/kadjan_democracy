@@ -38,7 +38,6 @@ We have for long had bad relations with Zephyr but perhaps that could change , t
 
 [? if austrian_parliament_seen and not austrian_civil_war_seen: This also helps bolster the reformist wing of the Zephyrian goverment. ?]
 
-
 @scandi
 subtitle: -1 resources
 choose-if: resources >= 1
@@ -46,7 +45,6 @@ unavailable-subtitle: Not enough resources.
 on-arrival: reformist_strength += 8; wtb_support += 1; resources -= 1; moderate_plan_support += 1
 
 Sentara has a mixed reputation among our populace with some preffering Zephyr in the ongoing cold war. We build relations with Sentara increasing the strength of our Sentaran aligned factions and also perhaps opening some doors in the future on deeper cooperation.
-
 
 @comintern
 subtitle: -1 resources
