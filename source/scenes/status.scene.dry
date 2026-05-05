@@ -165,7 +165,7 @@ Old Middle Class: KCP: [+ old_middle_kcp_display +]%, HP: [+ old_middle_hp_displ
 
 Rural: KCP: [+ rural_kcp_display +]%, HP: [+ rural_hp_display +]%, UP: [+ rural_up_display +]%, VNPF: [+ rural_vnpf_display +]% ?]
 
-Unemployed: KCP: [+ unemployed_kcp_display +]%, HP: [+ unemployed_hp_display +]%, UP: [+ unemployed_up_display +]%, VNPF: [+ unemployed_nsdap_display +]% ?]
+Unemployed: KCP: [+ unemployed_kcp_display +]%, HP: [+ unemployed_hp_display +]%, UP: [+ unemployed_up_display +]%, VNPF: [+ unemployed_vnpf_display +]% ?]
 
 Catholics: KCP: [+ catholics_kcp_display +]%, HP: [+ catholics_hp_display +]%, UP: [+ catholics_up_display +]%, VNPF: [+ catholics_vnpf_display +]% ?]
 
