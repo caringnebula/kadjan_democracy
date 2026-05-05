@@ -14,7 +14,7 @@ max-cards: 5
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 1928 and month = 3 : The interim goverments time is coming to a end and elections are coming. ?]
+[? if year = 90 and month = 3 : The interim goverments time is coming to a end and elections are coming. ?]
 
 - @party
 - @govt
@@ -37,7 +37,7 @@ max-cards: 5
 
 #Here, the main deck will be displayed. Clicking on the deck draws a card into your hand. Clicking on a card activates that card.
 
-[? if year = 1928 and month = 2 : The monarchy has fallen as a result of a Guran boycot a republican constitution has been signed and a new party of fresh blood the Kadjan Constitutionalist Party (Thats us) is quickly making waves in the political space as they try to rise in prominence. ?]
+[? if year = 90 and month = 2 : The monarchy has fallen as a result of a Guran boycot a republican constitution has been signed and a new party of fresh blood the Kadjan Constitutionalist Party (Thats us) is quickly making waves in the political space as they try to rise in prominence. ?]
 
 - @party
 - @govt
