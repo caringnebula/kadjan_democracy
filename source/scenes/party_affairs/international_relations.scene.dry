@@ -6,15 +6,15 @@ view-if: international_relations_timer <= 0
 on-arrival: month_actions += 1; international_relations_timer += 12;
 card-image: img/kcp_international_relations.jpg
 max-visits: 4
-#subtitle: Building ties with our fraternal socialist parties.
+#subtitle: Building ties with other international subjects can help our cause.
 
-At the Labor and Socialist International, we can forge contacts with our fraternal socialist parties in Europe and across the world.
+While there is a limit to relation building we can do as a party it is still good to do so.
 
 - @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
 - @austria: Learn organization and street fighting from the Austrian SDAPÖ.
 - @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
 - @comintern: Forget the second international - embed a spy in the Comintern's conference.
-- @america: Contact the Socialist party of America.
+- @america: Contact the Yoakumaen diaspora in Rozow.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
 - @cancel_advisor_action
@@ -61,7 +61,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1
 
-The Socialist Party of America is tiny and has limited support. There is not much we can do for them, and conversely, not much they can do for us.
+The Yoakumaen diaspora in Rozow lacks any real political power or strong connections. Little we can do for them , little they can do for us.
 
 @reduce
 
