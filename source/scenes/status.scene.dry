@@ -155,16 +155,16 @@ VNPF: [+ vnpf_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: KCP: [+ workers_kcp_display +]%, HP: [+ workers_hp_display +]%, UP: [+ workers_up_display +]%; VNPF: [+ workers_vnpf_display +]% ?]
+Workers: KCP: [+ workers_kcp_display +]%, HP: [+ workers_hp_display +]%, UP: [+ workers_up_display +]%; VNPF: [+ workers_vnpf_display +]%  ?]
 
-New Middle Class: KCP: [+ new_middle_kcp_display +]%, HP: [+ new_middle_hp_display +]%, UP: [+ new_middle_up_display +]%, VNPF: [+ new_middle_vnpf_display +]% ?]
+New Middle Class: KCP: [+ new_middle_kcp_display +]%, HP: [+ new_middle_hp_display +]%, UP: [+ new_middle_up_display +]%; VNPF [+ new_middle_vnpf_display +]% ?]
 
 Old Middle Class: KCP: [+ old_middle_kcp_display +]%, HP: [+ old_middle_hp_display +]%, UP: [+ old_middle_up_display +]%; VNPF: [+ old_middle_vnpf_display +]% ?]
 
-Rural: KCP: [+ rural_kcp_display +]%, HP: [+ rural_hp_display +]%, UP: [+ rural_up_display +]%, VNPF: [+ rural_vnpf_display +]% ?]
+Rural: KCP: [+ rural_kcp_display +]%, HP: [+ rural_hp_display +]%, UP: [+ rural_up_display +]%; VNPF: [+ rural_vnpf_display +]% ?]
 
-Unemployed: KCP: [+ unemployed_kcp_display +]%, HP: [+ unemployed_hp_display +]%, UP: [+ unemployed_up_display +]%, VNPF: [+ unemployed_vnpf_display +]% ?]
+Unemployed: KCP: [+ unemployed_kcp_display +]%, HP: [+ unemployed_hp_display +]%, UP: [+ unemployed_up_display +]%; VNPF: [+ unemployed_vnpf_display +]% ?]
 
-Catholics: KCP: [+ catholics_kcp_display +]%, HP: [+ catholics_hp_display +]%, UP: [+ catholics_up_display +]%, VNPF: [+ catholics_vnpf_display +]% ?]
+Catholics: KCP: [+ catholics_kcp_display +]%, HP: [+ catholics_hp_display +]%, UP: [+ catholics_up_display +]%; VNPF: [+ catholics_vnpf_display +]% ?]
 
 Support for the Republic: [+ pro_republic_disp +]%
