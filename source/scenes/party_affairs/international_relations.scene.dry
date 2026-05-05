@@ -10,10 +10,10 @@ max-visits: 4
 
 While there is a limit to relation building we can do as a party it is still good to do so.
 
-- @fr_uk: Build relationships with the French SFIO and British Labour Party to move their governments in Germany's favor.
-- @austria: Learn organization and street fighting from the Austrian SDAPÖ.
-- @scandi: Learn the path of economics and reform from the Scandinavian social democrats.
-- @comintern: Forget the second international - embed a spy in the Comintern's conference.
+- @fr_uk: Build a relationship with Amar as they host the Conference.
+- @austria: Perhaps we could repair our relationship with Zephyr?
+- @scandi: Visit Sentara our long standing allies.
+- @comintern: Use Yoakumaen contacts in Zilatra.
 - @america: Contact the Yoakumaen diaspora in Rozow.
 - @return: We do not need international contacts at the moment.
 - @easy_discard
@@ -25,7 +25,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifism += 1; moderate_plan_support += 1
 
-The socialists of France and Britain can influence their governments to be friendlier towards Germany. Hopefully they will reduce our reparations burden.
+The Amar state is reclusive but Buzzy and the conference offers a way to interact with them and build relations.
 
 @austria
 subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
@@ -34,9 +34,9 @@ unavailable-subtitle: Not enough resources.
 audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
 
-Our Reichsbanner can learn much in paramilitary organization and training from the Austrian Republikanischer Schutzbund (Republican Protection Units), the paramilitary branch of the Austrian social democrats.
+We have for long had bad relations with Zephyr but perhaps that could change , they also provide aid to build up organization of our paramilitary troops.
 
-[? if austrian_parliament_seen and not austrian_civil_war_seen: We are also helping the Austrian Social Democratic Worker's Party build up their resources in preparation for a future struggle, legally and illegally. ?]
+[? if austrian_parliament_seen and not austrian_civil_war_seen: This also helps bolster the reformist wing of the Zephyrian goverment. ?]
 
 
 @scandi
@@ -45,7 +45,8 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: reformist_strength += 8; wtb_support += 1; resources -= 1; moderate_plan_support += 1
 
-The programs of the Nordic socialists involve active government intervention in the economy. We can learn from their economic strategies, and how they moved beyond their working-class base to attract a broader set of constituents.
+Sentara has a mixed reputation among our populace with some preffering Zephyr in the ongoing cold war. We build relations with Sentara increasing the strength of our Sentaran aligned factions and also perhaps opening some doors in the future on deeper cooperation.
+
 
 @comintern
 subtitle: -1 resources
@@ -53,7 +54,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; kpd_relation += 5*(1-dissent); communist_coalition += 1 if comintern_seen == 0; comintern_seen += 1
 
-The Stalinists of the KPD insists on calling us "social fascists", suggesting that we social democrats are as bad or worse than actual fascists. Needless to say, this is not good for our relationship with the Communists. By observing the Comintern, we can better understand the KPD, enabling us to potentially improve relations, or counter the KPD if it may come to that.
+The Zilatrans are not our natural allies due to our ideaological diffirences but they do posses contacts among leftits and Kaddu and it may be worth building these relations as a way to perhaps influence our own leftists.
 
 @america
 subtitle: -1 resources
