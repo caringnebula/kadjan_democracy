@@ -157,7 +157,7 @@ VNPF: [+ vnpf_votes +]%
 
 **Detailed results for each demographic**
 
-Workers: KCP: [+ workers_spd_display +]%, HP: [+ workers_hp_display +]%, UP: [+ workers_up_display +]%; VNPF: [+ workers_vnpf_display +]% ?]
+Workers: KCP: [+ workers_kcp_display +]%, HP: [+ workers_hp_display +]%, UP: [+ workers_up_display +]%; VNPF: [+ workers_vnpf_display +]% ?]
 
 New Middle Class: KCP: [+ new_middle_kcp_display +]%, HP: [+ new_middle_hp_display +]%, UP: [+ new_middle_up_display +]%, VNPF: [+ new_middle_vnpf_display +]% ?]
 
