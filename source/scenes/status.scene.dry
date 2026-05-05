@@ -147,8 +147,6 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 KCP: [+ kcp_votes +]%
 
-[? if drcp_formed: DRCP: [+ drcp_votes +]% ?]
-
 HP: [+ hp_votes +]%
 
 UP: [+ up_votes +]%
