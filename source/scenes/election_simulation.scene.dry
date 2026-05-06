@@ -25,16 +25,16 @@ Q.parties = ['kcp', 'vnpf', 'hp', 'up'];
 Q.workers_kcp = 65;
 Q.workers_up = 20;
 Q.workers_hp = 5;
-Q.workers_vnpf = 0;
+Q.workers_vnpf = 10;
 
 Q.old_middle_kcp = 5;
-Q.old_middle_up = 0;
+Q.old_middle_up = 30;
 Q.old_middle_hp = 5;
 Q.old_middle_vnpf= 10;
 
 
 Q.new_middle_kcp = 5;
-Q.new_middle_up = 0;
+Q.new_middle_up = 20;
 Q.new_middle_hp = 10;
 Q.new_middle_vnpd = 25;
 
