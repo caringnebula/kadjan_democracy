@@ -225,18 +225,6 @@ Q.new_middle_qol = 100;
 Q.classes = ['workers', 'old_middle', 'new_middle', 'rural', 'unemployed', 'catholics'];
 Q.parties = ['kcp', 'up', 'vnpf', 'hp'];
 
-Q.kcp_name = "FP";
-Q.kcp_full_name = "Forsvollrist Party";
-
-Q.hp_name = "HP";
-Q.hp_full_name = "Historia Party";
-
-Q.up_name = "UP";
-Q.up_full_name = "Unitarist Party";
-
-Q.vnpf_name = "VNPF";
-Q.vnpf_full_name = "Vynarian National Peoples Front";
-
 // TODO: add 'sapd' later on
 Q.drcp_formed = 0;
 
