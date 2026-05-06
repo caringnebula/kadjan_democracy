@@ -1,4 +1,4 @@
-title: Reichstag Elections
+title: Senate Elections
 new-page: true
 tags: event
 priority: -1
@@ -16,25 +16,6 @@ face-image: img/Rothe_Wahlen_1903.jpg
 The Reichstag elections are to be held now.
 
 - @election_algorithm: May we do our best...
-- @cancel_elections
-
-@cancel_elections
-title: We cannot hold the elections now. Cancel the elections.
-subtitle: This is an anti-democratic move that may backfire.
-view-if: in_emergency_government == 1 and president == "Braun" and not presidential_powers
-
-Since we are currently ruling as part of an emergency government, we may use quasi-constitutional trickery to significantly delay these elections, and continue governing via Article 48. This is likely to be extremely unpopular both with our base and with the other parties. However, this may be necessary to prevent the extremists from gaining power.
-
-- @cancel_elections_2: Yes, do it.
-- @election_algorithm: No, let's hold the elections.
-
-@cancel_elections_2
-on-departure: next_election_year = next_election_year + 1; next_election_time = time + 12; pro_republic -= 10; dvp_relation -= 8; z_relation -= 8; ddp_relation -= 10; kpd_relation -= 8; coup_progress += 2; workers_spd -= 4; new_middle_spd -= 5; old_middle_spd -= 5; rural_spd -= 5; catholics_spd -= 5; unemployed_spd -= 5; coup_progress += 2 if nsdap_normalized >= 0.3; coup_progress += 2 if nsdap_normalized + dnvp_normalized >= 0.5; sa_strength += 100 if coup_progress >= 7; sh_strength += 100 if coup_progress >= 7
-achievement: ausnahmezustand
-
-Fine. President [+ president +] has taken the unprecedented step of canceling these elections. New elections are scheduled for [+ next_election_month : month +] [+ next_election_year +].
-
-Let us hope this does not backfire.
 
 @post_election_1928
 on-arrival: {!
@@ -88,92 +69,39 @@ if (Q.electoral_threshold && Q.electoral_threshold > 0) {
 // get change arrows and signs
 
 
-// The largest party can only be the NSDAP or the SPD.
-Q.largest_party = 'SPD';
-if (Q.nsdap_r >= Q.spd_r && Q.nsdap_r >= Q.kpd_r) {
-    Q.largest_party = 'NSDAP';
+// The largest party can only be the KCP or the UP.
+Q.largest_party = 'KCP';
+if (Q.up_r >= Q.hp_r && Q.kcp_r >= Q.vnpf_r) {
+    Q.largest_party = 'UP';
 }
 
-if (Q.kpd_r >= Q.spd_r && Q.kpd_r >= Q.nsdap_r) {
-    Q.largest_party = 'KPD';
+if (Q.hp_r >= Q.kcp_r && Q.vnpf_r >= Q.up_r) {
+    Q.largest_party = 'HP';
 }
 
 // coalitions
-Q.weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r - 3;
-Q.grand_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r;
-Q.bourgeois_coalition = Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-Q.center_right_coalition = Q.z_r + Q.ddp_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.right_coalition = Q.z_r + Q.dvp_r + Q.other_r + Q.dnvp_r;
-Q.far_right_coalition = Q.dnvp_r + Q.nsdap_r;
-Q.left_coalition = Q.spd_r + Q.kpd_r + Q.sapd_r;
-// this is an absurd concept lol
-Q.popular_front_coalition = Q.spd_r + Q.kpd_r + Q.z_r + Q.ddp_r - 3 + Q.sapd_r;
-Q.anti_democratic_coalition = Q.kpd_r + Q.nsdap_r + Q.dnvp_r;
-// aka everyone except nazi, kpd, dnvp
-Q.neo_weimar_coalition = Q.spd_r + Q.ddp_r + Q.z_r + Q.dvp_r + Q.other_r;
-// Hitler + Right-wing parties (only comes into effect if you've alienated Z too badly)
-Q.hitler_right_coalition = Q.z_r + Q.dnvp_r + Q.nsdap_r;
-// Progressive coalition isn't going to be implemented as a distinct coalition but it's the coalition that lets you pass improved women's rights/gay rights
-Q.progressive_coalition = Q.spd_r + Q.kpd_r + Q.ddp_r + Q.sapd_r;
+Q.left_coalition = Q.kcp_r + Q.up_r;
+Q.populist_coalition = Q.up_r + Q.vnpf_r;
+Q.anti_coalition = Q.hp_r + Q.vnpf_r + Q.hp_r;
+Q.national_coalition = Q.vnpf_r + Q.hp_r;
 
-if (Q.kpd_relation >= 30) {
-    Q.weimar_coalition += Q.sapd_r;
-}
+Q.leverage = Q.kcp_r;
 
-Q.leverage = Q.spd_r;
-
-Q.grand_coalition_failed = 0;
+Q.left_coalition_failed = 0;
 // Reset government and ministers... Based on Brüning's 1930 govt
 Q.coalition_dissent = 0;
-Q.kpd_coalition_dissent = 0;
 Q.spd_in_government = 0;
-Q.in_weimar_coalition = 0;
-Q.in_grand_coalition = 0;
-Q.in_left_front = 0;
-Q.in_popular_front = 0;
-Q.in_emergency_government = 0;
-Q.in_minority_government = 0;
-Q.in_unity_government = 0;
-Q.spd_toleration = 0;
-Q.spd_caretaker = 0;
-Q.foreign_minister_party = 'DVP';
-Q.interior_minister_party = 'Z';
+Q.in_left_coalition = 0;
+Q.foreign_minister_party = 'I';
+Q.interior_minister_party = 'I';
 Q.justice_minister_party = 'I';
-Q.labor_minister_party = 'Z';
+Q.labor_minister_party = 'I';
 Q.reichswehr_minister_party = 'I';
-Q.economic_minister_party = Q.ddp_name;
-Q.finance_minister_party = 'DVP';
-Q.agriculture_minister_party = 'Z';
+Q.economic_minister_party = 'I';
+Q.finance_minister_party = 'I';
+Q.agriculture_minister_party = 'I';
 
-// reset KPD goals
-Q.kpd_goals_seen = 0;
-Q.kpd_ultimatum_seen = 0;
-Q.welfare_goal = 0;
-Q.agriculture_goal = 0;
-Q.economy_goal = 0;
-Q.finance_goal = 0;
-Q.labor_goal = 0;
-Q.foreign_goal = 0;
-Q.interior_goal = 0;
-Q.reichswehr_goal = 0;
 
-Q.welfare_goal_completed = 0;
-Q.agriculture_goal_completed = 0;
-Q.economy_goal_completed = 0;
-Q.finance_goal_completed = 0;
-Q.labor_goal_completed = 0;
-Q.foreign_goal_completed = 0;
-Q.interior_goal_completed = 0;
-Q.reichswehr_goal_completed = 0;
-
-Q.strike_term_seen = 0;
-
-Q.z_minus_bvp_r = Q.z_r - 3;
-
-// understanding the enemy
-if (Q.nsdap_r >= 15) {
-    Q.understanding_enemy_timer = 2;
-}
 
 var election_result = {'date': new Date(Q.year, Q.month - 1)};
 for (var party of Q.parties) {
@@ -183,70 +111,30 @@ Q.election_records.push(election_result);
 !}
 on-departure: nazi_urgency = 1 if (nazi_urgency == 0 and nsdap_r >= 15)
 on-display: {!
-data = [
-    {
-        "id": "kpd",
-        "legend": "KPD",
-        "name": "KPD",
-        "seats": Math.round(Q.kpd_r*5),
-    }
-];
-if (Q.sapd_formed && Q.sapd_r) {
-    data.push({
-            "id": "sapd",
-            "legend": "SAPD",
-            "name": "SAPD",
-            "seats": Math.round(Q.sapd_r*5),
-            });
-}
 data = data.concat([
     {
-        "id": "spd",
-        "legend": "SPD",
-        "name": "SPD",
-        "seats": Math.round(Q.spd_r*5),
+        "id": "kcp",
+        "legend": "KCP",
+        "name": "KCP",
+        "seats": Math.round(Q.kcp_r*5),
     },
     {
-        "id": "ddp",
-        "legend": Q.ddp_name,
-        "name": Q.ddp_name,
-        "seats": Math.round(Q.ddp_r*5),
+        "id": "up",
+        "legend": "UP",
+        "name": "UP",
+        "seats": Math.round(Q.up_r*5),
     },
     {
-        "id": "z",
-        "legend": "Center",
-        "name": "Center",
-        "seats": Math.round((Q.z_r - 3)*5),
+        "id": "hp",
+        "legend": "HP",
+        "name": "HP",
+        "seats": Math.round(Q.hp_r*5),
     },
     {
-        "id": "bvp",
-        "legend": "BVP",
-        "name": "BVP",
-        "seats": Math.round(3*5),
-    },
-    {
-        "id": "dvp",
-        "legend": "DVP",
-        "name": "DVP",
-        "seats": Math.round(Q.dvp_r*5),
-    },
-    {
-        "id": "other",
-        "legend": "Other",
-        "name": "Other",
-        "seats": Math.round(Q.other_r*5),
-    },
-    {
-        "id": "dnvp",
-        "legend": "DNVP",
-        "name": "DNVP",
-        "seats": Math.round(Q.dnvp_r*5),
-    },
-    {
-        "id": "nsdap",
-        "legend": "NSDAP",
-        "name": "NSDAP",
-        "seats": Math.round(Q.nsdap_r*5),
+        "id": "vnpf",
+        "legend": "VNPF",
+        "name": "VNPF",
+        "seats": Math.round(Q.vnpf_r*5),
     },
 ]);
 
@@ -275,59 +163,70 @@ go-to: coalition_menu
 
 {!<table>!} 
 {!<tr><td>Party</td><td>Vote share</td><td>% Change</td></tr>!}
-{!<tr><td><div class="box" style='background-color:#E3000F; outline: 2px; outline-style: solid;'> </div> !} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td><td>!} **[+ str_change_spd +]** {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#2600e3; outline: 2px; outline-style: solid;'> </div> !} **KCP:** {!</td><td>!} **[+ kcp_r +]%** {!</td><td>!} **[+ str_change_kcp +]** {!</td></tr>!}
 
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td><td>!} [+ str_change_sapd +] {!</td></tr>!} ?]
+{!<tr><td><div class="box" style='background-color:#d60404'> </div> !} UP: {!</td><td>!} [+ up_r +]% {!</td><td>!} [+ str_change_up +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#8B0000'> </div> !}KPD: {!</td><td>!} [+ kpd_r +]% {!</td><td>!} [+ str_change_kpd +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ca07e8'> </div> !} VNPF : {!</td><td>!} [+ vnpf +]% {!</td><td>!} [+ str_change_vnpf +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#DCCA4A'> </div> !} [+ ddp_name +]: {!</td><td>!} [+ ddp_r +]% {!</td><td>!} [+ str_change_ddp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#000'> </div> !} Z: {!</td><td>!} [+ z_minus_bvp_r +]% {!</td><td>!} [+ str_change_z +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#69A2BE'> </div> !} BVP: {!</td><td>!} 3% {!</td><td>!} 0 {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#D5AC27'> </div> !} DVP: {!</td><td>!} [+ dvp_r +]% {!</td><td>!} [+ str_change_dvp +] {!</td></tr>!}
- 
-{!<tr><td><div class="box" style='background-color:#a0a0a0'> </div> !} Others: {!</td><td>!} [+ other_r +] % {!</td><td>!} [+ str_change_other +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#3f7bc1'> </div> !} DNVP: {!</td><td>!} [+ dnvp_r +]% {!</td><td>!} [+ str_change_dnvp +] {!</td></tr>!}
-
-{!<tr><td><div class="box" style='background-color:#954B00'> </div> !} NSDAP: {!</td><td>!} [+ nsdap_r +]% {!</td><td>!} [+ str_change_nsdap +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ffbd08'> </div> !} HP : {!</td><td>!} [+ hp +]% {!</td><td>!} [+ str_change_hp +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
 
-Weimar Coalition (SPD + Z + [+ ddp_name +]): [+ weimar_coalition +]%
+Left-Constitutionalist (KCP + UP): [+ left_coalition +]%
 
-Grand Coalition (SPD + Z + BVP + [+ ddp_name +] + DVP): [+ grand_coalition +]%
+Populist-Left Coalition (VNPF + UP): [+ populist_coalition +]%
 
-Bourgeois Coalition (Z + BVP + [+ ddp_name +] + DVP + Others): [+ bourgeois_coalition +]%
+Anti-Constitutionalist Coalition (VNPF + UP + HP): [+ anti_coalition +]%
 
-Right-wing Coalition (Z + BVP + DVP + Others + DNVP): [+ right_coalition +]%
-
-[? if nazi_urgency <= 1 and nsdap_r >= 15 : The rapid rise in NSDAP votes is extremely worrying. Many had believed that the party was moribund; now, some of us consider it to be the greatest threat to democracy in Germany. ?]
-
-[? if anti_democratic_coalition >= 50 : Together, the anti-democratic KPD, DNVP, and NSDAP have a majority in the Reichstag. A stable governing majority will be almost impossible. ?]
+National Coalition (VNPF + HP): [+ national_coalition +]%
 
 There are some potential coalition arrangements.
 
 @coalition_menu
 
-- @spd_majority
-- @weimar_coalition
-- @grand_coalition
-- @new_grand_coalition
-- @unity_government
-- @far_right_coalition
-- @no_majority
-- @brauns_dilemma
+- @kcp_majority
 - @left_coalition
-- @popular_front_coalition
-- @right_coalition
+- @anti_coalition
+- @populist_coalition
+- @national_coalition
 
-# TODO: black-brown coalition
+@kcp_majority
+title: KCP majority alone
+subtitle: KCP: [+ kcp_r +]%
+view-if: kcp_r >= 50
+on-arrival: chancellor = "Empty"; chancellor_party = "KCP"; kcp_in_government = 1; in_kcp_majority = 1; pro_republic += 5; foreign_minister_party = "KCP"; foreign_minister = "Anovium"; interior_minister_party = "KCP"; interior_minister = "Annastasia"; justice_minister_party = "KCP"; justice_minister = "Enagizer"; labor_minister_party = "KCP"; labor_minister = "Pengu"; reichswehr_minister_party = "I"; reichswehr_minister = "Evarn"; economic_minister_party = "KCP"; economic_minister = "Diumvirate"; finance_minister_party = "KCP"; finance_minister = "Diumvirate"; agriculture_minister_party = "KCP"; agriculture_minister = "Annastasia"; reichswehr_loyalty -= 0.05; 
 
+The KCP assumes its place as the party of natural governance. This place has mostly been earned by the momentum hidden behind the party as the party which helped found the republic.
+
+Who should be primus?
+
+- @annastasia_majority_chancellor: Annastasia for Primus
+
+
+@annastasia_majority_chancellor
+on-arrival: chancellor = "Annastasia"
+
+Annastasia von Yoaken has become chancellor of the KCP majority.
+
+@left_coalition
+title: We can form a coalition with the unitarists?.
+subtitle: KCP + UP ([+ left_coalition +]%)
+view-if: left coalition >= 50
+on-arrival: leverage += 5; in_left_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; interior_minister_party = "KCP"; justice_minister_party = "I"; labor_minister_party = "UP"; reichswehr_minister_party = "I"; economic_minister_party = "UP"; finance_minister_party = "UP"; agriculture_minister_party = "UP"; foreign_minister = "Anovium"; interior_minister = "Anovium"; justice_minister = "Enagizer"; labor_minister = "Moriarty"; reichswehr_minister = "Evarn"; economic_minister = "Moriarty"; finance_minister = "Moriarty"; agriculture_minister = "Moriarty";
+
+We have enough votes to form a "Weimar Coalition" government consisting of the SPD, Center (Z) and Democratic ([+ ddp_name +]) parties! This has been our preferred governing coalition since 1919.
+
+Who should be the Primus?
+
+- @annastasia
+
+@annastasia_coalition_chancellor
+title: Annastasia for Primus.
+subtitle: Annastasia is a compromise candidate... with her previous anti-socialist rhetoric this may however still be a problem.
+on-arrival: chancellor = "Annastasia"; chancellor_party = "KCP";
+go-to: ministries
 
 @popular_front_coalition
 title: A new "Popular Front" coalition?
