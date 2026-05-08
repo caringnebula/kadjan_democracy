@@ -87,11 +87,6 @@ Q.national_coalition = Q.vnpf_r + Q.hp_r;
 
 Q.leverage = Q.kcp_r;
 
-Q.left_coalition_failed = 0;
-// Reset government and ministers... Based on Brüning's 1930 govt
-Q.coalition_dissent = 0;
-Q.spd_in_government = 0;
-Q.in_left_coalition = 0;
 Q.foreign_minister_party = 'I';
 Q.interior_minister_party = 'I';
 Q.justice_minister_party = 'I';
@@ -220,7 +215,7 @@ We have enough votes to somehow form a coalition with the unitarists.
 
 Who should be the Primus?
 
-- @annastasia
+- @annastasia_coalition_chancellor
 
 @annastasia_coalition_chancellor
 title: Annastasia for Primus.
@@ -241,7 +236,7 @@ on-arrival: kcp_in_government = 0; chancellor = "Synthellic"; chancellor_party =
 
 Somehow the anti-KCP forces have managed to cobble together a coalition. Only time will tell if this can last.
 
-@populist_front
+@populist_coalition
 view-if: populist_coalition >= 50
 on-arrival: kcp_in_government = 0; chancellor = "Moriarty"; chancellor_party = "UP"; foreign_minister_party = "VNPF"; interior_minister_party = "VNPF"; justice_minister_party = "UP"; labor_minister_party = "UP"; reichswehr_minister_party = "VNPF"; economic_minister_party = "UP"; finance_minister_party = "UP"; agriculture_minister_party = "VNPF"; in_populist_coalition = 1;
 
