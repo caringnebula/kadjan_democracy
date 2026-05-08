@@ -161,9 +161,9 @@ go-to: coalition_menu
 
 {!<tr><td><div class="box" style='background-color:#d60404'> </div> !} UP: {!</td><td>!} [+ up_r +]% {!</td><td>!} [+ str_change_up +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ca07e8'> </div> !} VNPF : {!</td><td>!} [+ vnpf +]% {!</td><td>!} [+ str_change_vnpf +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ca07e8'> </div> !} VNPF : {!</td><td>!} [+ vnpf_r +]% {!</td><td>!} [+ str_change_vnpf +] {!</td></tr>!}
 
-{!<tr><td><div class="box" style='background-color:#ffbd08'> </div> !} HP : {!</td><td>!} [+ hp +]% {!</td><td>!} [+ str_change_hp +] {!</td></tr>!}
+{!<tr><td><div class="box" style='background-color:#ffbd08'> </div> !} HP : {!</td><td>!} [+ hp_r +]% {!</td><td>!} [+ str_change_hp +] {!</td></tr>!}
 {!</table>!}
 
 **Potential coalitions:**
