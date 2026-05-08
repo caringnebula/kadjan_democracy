@@ -230,15 +230,15 @@ Q.drcp_formed = 0;
 
 // Support for party by social group
 // they don't have to sum to 100 since the electoral calculations will be normalized.
-Q.workers_kcp = 25;
-Q.workers_up = 25;
-Q.workers_vnpf = 25;
-Q.workers_hp = 25;
+Q.workers_kcp = 20;
+Q.workers_up = 0;
+Q.workers_vnpf = 0;
+Q.workers_hp = 0;
 
-Q.old_middle_kcp = 25;
-Q.old_middle_up = 25;
-Q.old_middle_vnpf = 25;
-Q.old_middle_hp= 25;
+Q.old_middle_kcp = 50;
+Q.old_middle_up = 0;
+Q.old_middle_vnpf = 0;
+Q.old_middle_hp= 0;
 
 Q.new_middle_kcp = 25;
 Q.new_middle_up = 25;
