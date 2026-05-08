@@ -384,10 +384,6 @@ if (d3 && window) {
 {!<svg id="reichstag" style="width: 500px; height: 250px;"> </svg>!}
 
 {!<table>!}
-{!<tr><td><div class="box" style='background-color:#3c32a8; outline: 2px; outline-style: solid;'> </div></td><td>!} **SPD:** {!</td><td>!} **[+ spd_r +]%** {!</td></tr>!}
-
-[? if sapd_formed : {!<tr><td><div class="box" style='background-color:#C40000'> </div></td> <td> !}SAPD: {!</td><td>!} [+ sapd_r +]% {!</td></tr>!} ?]
-
 {!<tr><td><div class="box" style='background-color:#d10a0a'> </div></td> <td>!} UP: {!</td><td>!} [+ up_r +]% {!</td></tr>!}
 
 {!<tr><td><div class="box" style='background-color:'#0415b0'> </div></td><td>!} KCP: {!</td><td>!} [+ kcp_r +]% {!</td></tr>!}
