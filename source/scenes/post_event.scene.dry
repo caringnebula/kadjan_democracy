@@ -303,7 +303,7 @@ if (Q.month_actions >= 1) {
         Q.old_middle_vnpf += 10/12;
         Q.new_middle_up -= 5/12;
         Q.new_middle_up -= 5/12;
-        Q.workers_kcp += 5/12;
+        Q.workers_up += 6/12;
         Q.sa_strength += 50/12;
         Q.sh_strength += 100/12;
         Q.rural_vnpf -= 15/12;
@@ -323,9 +323,9 @@ if (Q.month_actions >= 1) {
         Q.unemployed_vnpf += 8/12;
         Q.rural_vnpf += 5/12;
 
-        Q.workers_z += 1/12;
-        Q.old_middle_z += 2/12;
-        Q.new_middle_z += 2/12;
+        Q.workers_up += 1/12;
+        Q.old_middle_up += 2/12;
+        Q.new_middle_up += 2/12;
         if (!Q.works_program) {
             Q.rural_vnpf += 3/12;
             Q.old_middle_vnpf += 5/12;
