@@ -551,6 +551,7 @@ table {
 .seat.hp {
     fill: #ffbd08;
 }
+
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;
