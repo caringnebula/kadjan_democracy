@@ -81,7 +81,7 @@ if (Q.hp_r >= Q.kcp_r && Q.vnpf_r >= Q.up_r) {
 // coalitions
 Q.left_coalition = Q.kcp_r + Q.up_r;
 Q.populist_coalition = Q.up_r + Q.vnpf_r;
-Q.anti_coalition = Q.hp_r + Q.vnpf_r + Q.hp_r;
+Q.anti_coalition = Q.hp_r + Q.vnpf_r + Q.up_r;
 Q.national_coalition = Q.vnpf_r + Q.hp_r;
 
 Q.leverage = Q.kcp_r;
