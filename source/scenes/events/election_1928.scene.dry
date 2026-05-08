@@ -223,6 +223,20 @@ subtitle: Annastasia is a compromise candidate... with her previous anti-sociali
 on-arrival: chancellor = "Annastasia"; chancellor_party = "KCP";
 go-to: ministries
 
+@populist_coalition
+title: The Unitarists and People Front settle their diffirences?
+subtitle: UP + VNPF ([+ populist_coalition +]%)
+
+Can the two parties realy form a coalition?
+
+- @populist_success: This is ridiculous.
+
+@populist_success
+on-arrival: kcp_in_government = 0; chancellor = "Synthellic"; chancellor_party = "VNPF";
+
+Somehow the left wing Unitarists and right wing Frontists form a coalition.
+
+
 @anti_coalition
 title: The anti-establishment parties somehow solve their diffirences?
 subtitle: HP + UP + VNPF ([+ anti_coalition +]%)
@@ -235,14 +249,6 @@ Can the anti-KCP parties realy form a coalition?
 on-arrival: kcp_in_government = 0; chancellor = "Synthellic"; chancellor_party = "VNPF";
 
 Somehow the anti-KCP forces have managed to cobble together a coalition. Only time will tell if this can last.
-
-@populist_coalition
-title: Can the populist right meet the populist left?
-subtitle: VNPF + UP ([+ populist_coalition +]%)
-view-if: populist_coalition >= 50
-on-arrival: kcp_in_government = 0; chancellor = "Moriarty"; chancellor_party = "UP"; foreign_minister_party = "VNPF"; interior_minister_party = "VNPF"; justice_minister_party = "UP"; labor_minister_party = "UP"; reichswehr_minister_party = "VNPF"; economic_minister_party = "UP"; finance_minister_party = "UP"; agriculture_minister_party = "VNPF"; in_populist_coalition = 1;
-
-Somehow by the persuasion of the UP the VNPF is convinced to join a coalition with them even if their policies on nationalism and the unity of the nation differ , their populist rhetoric helps bridge the divide.
 
 @national_coalition
 title: National Coalition
