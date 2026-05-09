@@ -10,59 +10,71 @@ max-visits: 3
 
 = Questions of Ideology
 
-The SPD is torn between many different ideological currents. What should be our primary ideological guidance for now?
+The KCP is torn between many different ideological currents. What should be our primary ideological guidance for now?
 
 [? if ideology != 0 : We have previously chosen a [+ ideology +] ideology. Changing it will likely have drawbacks. ?]
 
-- @class_struggle: Class struggle and preparing the proletariat for the revolution are our primary goals.
-- @centrist: The Center Marxism of Karl Kautsky remains the best way to resolve our internal contradictions.
-- @labor: We should work with the trade unions to improve the lives of workers.
-- @reform: Following Eduard Bernstein, we should work for ethical socialism, strengthen democracy, and expand the party's electorate.
+- @socialist_struggle: The party must choose a left wing path , slowly but surely educating the populace and workers in order to pave a way to a socialist republic.
+- @humanist: The KCP is the founding party of the republic it is our job to educate the people in democracy and remain their steadfast protectors.
+- @liberal: We are the party of freedom and we must represent that.
+- @constitutionalist: Following Annastasia we must maintain the current status quo while improving the national situation. Our loyalties lie to the country not to any ideaology.
+- @neoforsvollrist: The Neo-Forsvollrist are a fringe wing mostly surrounding our Guran electorate. They support strong and technocratic governance and corporatist economy.
 - @easy_discard
 
-@class_struggle
+@socialist_struggle
 on-arrival: {!
-if (Q.ideology && Q.ideology != "left") {
+if (Q.ideology && Q.ideology != "socialist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "left"; left_strength += 10; communist_coalition += 1; left_dissent -= 5; z_relation -= 3; dvp_relation -= 5; nationalization_support += 1; kpd_relation += 3
+on-departure: ideology = "socialist"; socialist_strength += 10; socialist_dissent -= 5; up_relation += 3; vnpf_relation -= 5; nationalization_support += 1; up_relation += 3
 
-The radical left of the party supports a course of class struggle, and potentially a reconcilliation with the Communists.
+The left of the party has somehow managed to sway the rest for slow progress towards socialism. It is possible the other wings are only using it.
 
-@centrist
+@humanist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "centrist") {
+if (Q.ideology && Q.ideology != "humanist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "centrist"; center_strength += 10; center_dissent -= 10; left_dissent -= 5; reformist_dissent -= 5
+on-departure: ideology = "humanist"; humanist_strength += 10; humanist_dissent -= 10; socialist_dissent -= 5; liberal_dissent -= 5; nationalization_support += 1
 
-The Center Marxists, represented by Kautsky and Hilferding, support a middle course of preparing for revolution while building up the consciousness of the working class.
+The humanists in the middle of the party have proposed a set of points all wings can compromise upon , the expansion of our democracy and the education of the populace in the ways of its workings. Even if some wings only do so for their own goals.
 
-@labor
+@liberal
 on-arrival: {!
-if (Q.ideology && Q.ideology != "labor") {
+if (Q.ideology && Q.ideology != "liberal") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "labor"; labor_strength += 10; wtb_support += 1; labor_dissent -= 5; kpd_relation -= 3
+on-departure: ideology = "liberal"; liberal_strength += 10; liberal_dissent -= 5; up_relation -= 3; socialist_dissent += 5; neoforsvollrist_dissent += 5; nationalization_support += 1
 
-The labor wing of the party supports continued particpation in government in order to provide benefits to the workers, and the creation of public works programs for employment.
+The liberals of all colours in our party sway us by their ideas about personal and economic freedoms. Neoforsvollrists and Socialists grumble.
 
-@reform
+@constitutionalist
 on-arrival: {!
-if (Q.ideology && Q.ideology != "reformist") {
+if (Q.ideology && Q.ideology != "constitutionalist") {
     Q.changed = 1;
 }
 !}
 go-to: changed if changed = 1
-on-departure: ideology = "reformist"; reformist_strength += 10; democratization += 1; reformist_dissent -= 5; z_relation += 5; dvp_relation += 5; kpd_relation -= 8; moderate_plan_support += 1
+on-departure: ideology = "constitutionalist"; constitutionalist_strength += 10; democratization += 1; constitutionalist_dissent -= 5; vnpf_relation += 5; up_relation += 5; hp_relation -= 8
 
-The reformist wing of the party seeks to preserve the Republic and the democratic system of government, and is most supportive of coalitions with the other pro-democracy parties.
+The constitutionalist wing manages to push through their three pillars idea. Unity , Sovereignty , Democracy. The status-quo continues.
+
+@neoforsvollrist
+on-arrival: {!
+if (Q.ideology && Q.ideology != "neoforsvollrist") {
+    Q.changed = 1;
+}
+!}
+go-to: changed if changed = 1
+on-departure: ideology = "neoforsvollrist"; neoforsvollrist_strength += 10; democratization -= 1; constitutionalist_dissent -= 5; vnpf_relation -= 5; up_relation -= 5;  wtb_support += 1; humanist_dissent += 10; socialist_dissent += 5; liberal_dissent += 5
+
+The Neoforsvollrists with the support the support of our Guran branch have pushed through their ideaology. This will alienate the left and center wings.
 
 @changed
 on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
