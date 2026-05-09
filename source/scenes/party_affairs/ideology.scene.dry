@@ -77,6 +77,6 @@ on-departure: ideology = "neoforsvollrist"; neoforsvollrist_strength += 10; demo
 The Neoforsvollrists with the support the support of our Guran branch have pushed through their ideaology. This will alienate the left and center wings.
 
 @changed
-on-arrival: left_dissent += 5; center_dissent += 5; labor_dissent += 5; reformist_dissent += 5
+on-arrival: socialist_dissent += 5; humanist_dissent += 5; liberal_dissent += 5; constitutionalist_dissent += 5; neoforsvollrist_dissent += 5
 
 We have changed ideologies. Many in the party feel unmoored.
