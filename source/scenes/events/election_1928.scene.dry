@@ -190,7 +190,7 @@ There are some potential coalition arrangements.
 title: KCP majority alone
 subtitle: KCP: [+ kcp_r +]%
 view-if: kcp_r >= 50
-on-arrival: chancellor = "Empty"; chancellor_party = "KCP"; kcp_in_government = 1; in_kcp_majority = 1; pro_republic += 5; foreign_minister_party = "KCP"; foreign_minister = "Anovium"; interior_minister_party = "KCP"; interior_minister = "Annastasia"; justice_minister_party = "KCP"; justice_minister = "Enagizer"; labor_minister_party = "KCP"; labor_minister = "Pengu"; reichswehr_minister_party = "I"; reichswehr_minister = "Evarn"; economic_minister_party = "KCP"; economic_minister = "Diumvirate"; finance_minister_party = "KCP"; finance_minister = "Diumvirate"; agriculture_minister_party = "KCP"; agriculture_minister = "Annastasia"; reichswehr_loyalty -= 0.05; 
+on-arrival: leverage +=5 ;chancellor = "Empty"; chancellor_party = "KCP"; kcp_in_government = 1; in_kcp_majority = 1; pro_republic += 5; foreign_minister_party = "KCP"; foreign_minister = "Anovium"; interior_minister_party = "KCP"; interior_minister = "Annastasia"; justice_minister_party = "KCP"; justice_minister = "Enagizer"; labor_minister_party = "KCP"; labor_minister = "Pengu"; reichswehr_minister_party = "I"; reichswehr_minister = "Evarn"; economic_minister_party = "KCP"; economic_minister = "Diumvirate"; finance_minister_party = "KCP"; finance_minister = "Diumvirate"; agriculture_minister_party = "KCP"; agriculture_minister = "Annastasia"; reichswehr_loyalty -= 0.05; 
 
 The KCP assumes its place as the party of natural governance. This place has mostly been earned by the momentum hidden behind the party as the party which helped found the republic.
 
@@ -201,6 +201,7 @@ Who should be primus?
 
 @annastasia_majority_chancellor
 on-arrival: chancellor = "Annastasia"
+go-to: ministries
 
 Annastasia von Yoaken has become chancellor of the KCP majority.
 
