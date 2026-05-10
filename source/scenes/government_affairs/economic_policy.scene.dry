@@ -1,11 +1,11 @@
-title: Economic Policy
+title: Reconstruction policy
 new-page: true
 is-card: true
 tags: govt_affairs, cabinet
 on-arrival: economic_policy_timer += 12; month_actions += 1; nationalize_budget = 4; nationalize_budget -= 1 if works_councils >= 2; nationalize_budget -= 1 if works_councils >= 3; nationalize_budget -= 1 if socializations + nationalization_progress >= 2; wtb_budget = 4; wtb_budget -= 1 if works_councils >= 2 or socializations >= 1 or pro_labor >= 2
-view-if: spd_in_government = 1 and (economic_minister_party == "SPD" or finance_minister_party == "SPD") and economic_policy_timer <= 0 and economic_plan > 0
+view-if: kcp_in_government = 1 and (economic_minister_party == "KCP" or finance_minister_party == "KCP") and economic_policy_timer <= 0 and economic_plan > 0
 card-image: img/portraits/SchmidtRobert.jpg
-#subtitle: Policies to address the economic crisis.
+#subtitle: Policies for the reconstruction of Vynaria.
 
 = Economic Policy
 
@@ -25,12 +25,12 @@ We have already formulated an economic plan. Now we have to implement it.
 - @cancel_advisor_action
 
 @wtb_2
-title: Continue the implementation of the WTB-Plan.
+title: Continue the implementation of the Yoakumaen reconstruction.
 subtitle: -3 budget
 unavailable-subtitle: Unemployment is low enough that the time for the WTB-Plan has passed.
 view-if: wtb_implemented > 2 and budget >= 3 
 choose-if: unemployed > 8
-on-arrival: works_program += 1; budget -= 3; workers_spd += 7*(1-dissent); workers += 1 if works_program <= 4; unemployed -= 3 if unemployed > 8; unemployed_spd += 7*(1-dissent); workers_kpd -= 3; workers_nsdap -= 3; wtb_implemented += 1; kpd_coalition_dissent += 1; kpd_relation -= 5 if in_popular_front or in_left_front; inflation += 2; economic_growth += 1.6; economic_growth -= 0.6 if economic_growth > 5
+on-arrival: works_program += 1; budget -= 3; workers_kcp += 7*(1-dissent); workers += 1 if works_program <= 4; unemployed -= 3 if unemployed > 8; unemployed_kcp += 7*(1-dissent); workers_kcp += 3; workers_vnpf -= 3; wtb_implemented += 1; ; vnpf_relation -= 5 if in_left_front; inflation += 2; economic_growth += 1.6; economic_growth -= 0.6 if economic_growth > 5
 
 [? if works_program == 4 : We have commenced Phase 2 of the WTB-Plan. ?][? if works_program > 4 :  We have continued our implementation of the WTB-Plan. ?] In addition to public works, we are now focusing on rebuilding our industries.
 
