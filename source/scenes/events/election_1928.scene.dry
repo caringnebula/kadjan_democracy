@@ -83,7 +83,7 @@ Q.left_coalition = Q.kcp_r + Q.up_r;
 Q.populist_coalition = Q.up_r + Q.vnpf_r;
 Q.anti_coalition = Q.hp_r + Q.vnpf_r + Q.up_r;
 Q.national_coalition = Q.vnpf_r + Q.hp_r;
-Q.constitutionalist_regional_coalition = Q.vnpf_r + Q.kcp_r
+Q.regional_coalition = Q.vnpf_r + Q.kcp_r
 
 Q.leverage = Q.kcp_r;
 
@@ -169,7 +169,7 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
-Constitutionalist-Regional Coalition (VNPF + KCP): [+ constitutionalist_regional_coalition +]%
+Constitutionalist-Regional Coalition (VNPF + KCP): [+ regional_coalition +]%
 
 Left-Constitutionalist (KCP + UP): [+ left_coalition +]%
 
@@ -188,7 +188,7 @@ There are some potential coalition arrangements.
 - @anti_coalition
 - @populist_coalition
 - @national_coalition
-- @constitutionalist_regional_coalition
+- @regional_coalition
 
 @kcp_majority
 title: KCP majority alone
@@ -270,10 +270,10 @@ on-arrival: chancellor = "Tbgoes"; chancellor_party = "HP"
 
 - @hitler_takes_power: What do we do now?
 
-@constitutionalist_regionalist_coalition
+@regional_coalition
 title: Regionalist-Constitutionalist Coalition
-subtitle: KCP + VNPF ([+ constitutionalist_regional_coalition +]%)
-view-if: moderate_plan_progress > 1 and constitutionalist_regional_coalition >= 50
+subtitle: KCP + VNPF ([+ regional_coalition +]%)
+view-if: moderate_plan_progress > 1 and regional_coalition >= 50
 on-arrival: leverage += 5; in_regionalist_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; interior_minister_party = "VNPF"; justice_minister_party = "I"; labor_minister_party = "VNPF"; reichswehr_minister_party = "I"; economic_minister_party = "VNPF"; finance_minister_party = "VNPF"; agriculture_minister_party = "VNPF"; foreign_minister = "Anovium"; interior_minister = "Synthellic"; justice_minister = "Enagizer"; labor_minister = "Synthellic"; reichswehr_minister = "Evarn"; economic_minister = "Synthellic"; finance_minister = "Synthellic"; agriculture_minister = "Synthellic";
 
 We have enough votes to somehow form a coalition with the unitarists.
