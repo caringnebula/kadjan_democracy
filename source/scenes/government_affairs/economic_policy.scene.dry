@@ -50,7 +50,7 @@ on-arrival: budget += 1 if works_program <= 2; unemployed -= 5 if (works_program
 
 The city is begining to take shape. The new local Yoakumaen culture is thriving. However all comes at a cost and the "traditional" Vynarians left below the mountain in now growingly poorer parts of the city are grumbling about cultural erasure and replacement. Hard times ahead but we have gained a loyal support base which will prove vital for future elections.
 
-[? if or in_left_front: Moriarty comments to Annastasia one day that "This Yoakumaen experiment has gonne too far." ?]
+[? if in_left_front: Moriarty comments to Annastasia one day that "This Yoakumaen experiment has gonne too far." ?]
 
 @implement_wtb_no_deficit
 title: Begin reconstruction!
@@ -63,7 +63,7 @@ achievement: wirtschaftspolitik
 
 We have started to enact the WTB plan. Money is beginning to flow through the economy via investments in large-scale public works.
 
-[? if in_popular_front or in_left_front: Moriarty is very forthcoming and passionate about the Yoakumaen culture. He himself is one of the first to become a Yoakumaen in Kaddu. This wont last. ?]
+[? if in_left_front: Moriarty is very forthcoming and passionate about the Yoakumaen culture. He himself is one of the first to become a Yoakumaen in Kaddu. This wont last. ?]
 
 @implement_wtb_deficit
 title: Begin reconstruction even at the cost of a deficit!
