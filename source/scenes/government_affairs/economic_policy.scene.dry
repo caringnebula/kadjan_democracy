@@ -56,7 +56,7 @@ The city is begining to take shape. The new local Yoakumaen culture is thriving.
 title: Begin reconstruction!
 subtitle: -[+ wtb_budget +] budget. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
 unavailable-subtitle: The city is already reconstructed. We missed our moment.
-view-if: budget >= wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
+view-if: wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8
 on-arrival: budget -= wtb_budget; works_program += 1; unemployed -= 4; workers_kcp += 8*(1-dissent); unemployed_kcp += 8*(1-dissent); wtb_implemented += 1; up_relation -= 5 if in_left_front; inflation += 2; economic_growth += 2.8; pro_republic += 3*(1-dissent);
 achievement: wirtschaftspolitik
@@ -64,19 +64,6 @@ achievement: wirtschaftspolitik
 We have started to enact the WTB plan. Money is beginning to flow through the economy via investments in large-scale public works.
 
 [? if in_left_front: Moriarty is very forthcoming and passionate about the Yoakumaen culture. He himself is one of the first to become a Yoakumaen in Kaddu. This wont last. ?]
-
-@implement_wtb_deficit
-title: Begin reconstruction even at the cost of a deficit!
-subtitle: -[+ wtb_budget +] budget - we will enter deficit spending. [? if wtb_budget == 3 : Our pro-labor policies have reduced the cost of the plan. ?]
-unavailable-subtitle: The city is already reconstructed. We missed our moment.
-view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
-choose-if: unemployed > 8
-on-arrival:  works_program += 1; budget -= wtb_budget; unemployed -= 4; workers += 2; workers_kcp += 8*(1-dissent); unemployed_kcp += 8*(1-dissent); capital_strike_progress += 1; wtb_implemented += 1; up_relation -= 5 if in_left_front; inflation += 3; economic_growth += 3; pro_republic += 3*(1-dissent);
-
-We have entered deficit spending to fund the rapid reconstruction of the city. Annastasia herself covers most of the bill which continues to build a aura of personality around her. Debates will never again be so equal if she can point to the city and remind everyone she paid for it all.
-
-[? if in_left_front: Moriarty is very forthcoming and passionate about the Yoakumaen culture. He himself is one of the first to become a Yoakumaen in Kaddu. This wont last. ?]
-
 
 #######################################
 # Traditionalist Reconstruction
