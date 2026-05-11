@@ -83,6 +83,7 @@ Q.left_coalition = Q.kcp_r + Q.up_r;
 Q.populist_coalition = Q.up_r + Q.vnpf_r;
 Q.anti_coalition = Q.hp_r + Q.vnpf_r + Q.up_r;
 Q.national_coalition = Q.vnpf_r + Q.hp_r;
+Q.constitutionalist_regional_coalition = Q.vnpf_r + Q.kcp_r
 
 Q.leverage = Q.kcp_r;
 
@@ -168,6 +169,8 @@ go-to: coalition_menu
 
 **Potential coalitions:**
 
+Constitutionalist-Regional Coalition (VNPF + KCP): [+ constitutionalist_regional_coalition +]%
+
 Left-Constitutionalist (KCP + UP): [+ left_coalition +]%
 
 Populist-Left Coalition (VNPF + UP): [+ populist_coalition +]%
@@ -185,6 +188,7 @@ There are some potential coalition arrangements.
 - @anti_coalition
 - @populist_coalition
 - @national_coalition
+- @constitutionalist_regional_coalition
 
 @kcp_majority
 title: KCP majority alone
@@ -257,7 +261,7 @@ title: National Coalition
 subtitle: HP + VNPF ([+ national_coalition +]%)
 view-if: national_coalition >= 50
 go-to: far_right_win 
-priority: 2
+priority: 1
 
 The VNPF finds a friend in the HP with many of their members showing support for the idea of a monarchist party even if they did it for "support of a proper opposition against the KCP" however now that the two parties have a majority their true colours have a way to show.
 
@@ -265,6 +269,24 @@ The VNPF finds a friend in the HP with many of their members showing support for
 on-arrival: chancellor = "Tbgoes"; chancellor_party = "HP"
 
 - @hitler_takes_power: What do we do now?
+
+@constitutionalist_regionalist_coalition
+title: Regionalist-Constitutionalist Coalition
+subtitle: KCP + VNPF ([+ constitutionalist_regional_coalition +]%)
+view-if: if moderate_plan_progress > 1 and constitutionalist_regional_coalition >= 50
+on-arrival: leverage += 5; in_regionalist_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; interior_minister_party = "VNPF"; justice_minister_party = "I"; labor_minister_party = "VNPF"; reichswehr_minister_party = "I"; economic_minister_party = "VNPF"; finance_minister_party = "VNPF"; agriculture_minister_party = "VNPF"; foreign_minister = "Anovium"; interior_minister = "Synthellic"; justice_minister = "Enagizer"; labor_minister = "Synthellic"; reichswehr_minister = "Evarn"; economic_minister = "Synthellic"; finance_minister = "Synthellic"; agriculture_minister = "Synthellic";
+
+We have enough votes to somehow form a coalition with the unitarists.
+
+Who should be the Primus?
+
+- @annastasia_regionalist_coalition_chancellor
+
+@annastasia_regionalist_coalition_chancellor
+title: Annastasia for Primus.
+subtitle: Annastasia is a compromise candidate... with her previous anti-socialist rhetoric this may however still be a problem.
+on-arrival: chancellor = "Annastasia"; chancellor_party = "KCP";
+go-to: ministries
 
 
 
