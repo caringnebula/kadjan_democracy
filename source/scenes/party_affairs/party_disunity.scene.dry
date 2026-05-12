@@ -61,9 +61,9 @@ on-arrival: liberal_dissent -= 7; socialist_dissent += 5
 
 The liberals are given a larger voice in the party but the socialists are annoyed.
 
-@concessions_constitutionalists
-title: Give concessions to the neorevisionists.
-view-if: neorevisionist_dissent > 30 and neorevisionism = 1
+@concessions_constitutionalist
+title: Give concessions to the constitutionalist
+view-if: constitutionalist_dissent > 30
 on-arrival: constitutional_dissent -= 7; humanist_dissent += 5; socialist_dissent += 5
 
 Giving the constitutionalists more influence alienated the humanists and socialists
