@@ -1,7 +1,7 @@
 title: Confronting Anti-Yoakumaenism
 new-page: true
 is-card: true
-view-if: Q.hp_r + Q.vnpf_r > 50 and yoakumaen_adopted = 1
+view-if: yoakumaen_adopted = 1
 on-arrival: confronting_antisemitism += 1; month_actions += 1
 card-image: img/kcp_antiyoakumaenism.png
 tags: party_affairs, antifascism
