@@ -1,4 +1,4 @@
-title: Campaigning (People's Party)
+title: Campaigning as a citizens democracy.
 
 # basically, we can campaign as part of the people's party...
 
@@ -10,41 +10,43 @@ title: Campaigning (People's Party)
 - @campaign_catholics
 
 @campaign_workers
-title: Campaign among the workers, to assuage their doubts about our changes.
-on-arrival: workers_spd += 5*(1-dissent);
+title: Campaign among workers.
+on-arrival: workers_kcp += 6*(1-dissent);
 
-The workers are still a key part of our constituency, and we must not alienate them in the transformation of our party.
+The workers will surely welcome our new citizens society outlook.
 
 @campaign_middle
 title: Campaign among the middle classes.
-on-arrival: old_middle_spd += 5*(1-dissent); new_middle_spd += 5*(1-dissent)
+on-arrival: old_middle_kcp += 5*(1-dissent); new_middle_kcp += 6*(1-dissent)
 
-As a people's party, we represent the employees and small businesspeople of the middle class, and they are becoming receptive to our messages.
+We are reaching the middle classes thanks to our new image.
 
 @campaign_rural
 title: Campaign in rural areas.
 choose-if: rural_policy > 0
 unavailable-subtitle: We have not enacted any rural policies yet.
-on-arrival: rural_spd += 6*(1-dissent)
+on-arrival: rural_kcp += 14*(1-dissent)
 
-As a people's party, we represent farmers and rural workers as well, and they are becoming receptive to our messages.
+We are beggining to include local cooperatives and farmers leagues into our party structures. This builds support monumentaly.
 
 @campaign_unemployed
 title: Campaign among the unemployed.
-on-arrival: unemployed_spd += 5*(1-dissent);
+on-arrival: unemployed_kcp += 6*(1-dissent);
 
-As a people's party, the urban poor are still a key part of our constituency.
+We begin integrating aid programmes and providing free housing to the poor. This bolsters our support among the impoverished.
 
 @campaign_women
 title: Campaign among women of all classes.
-on-arrival: workers_spd += 3*(1-dissent); new_middle_spd += 3*(1-dissent); old_middle_spd += 3*(1-dissent); rural_spd += 3*(1-dissent); unemployed_spd += 3*(1-dissent);
+on-arrival: workers_kcp += 3*(1-dissent); new_middle_kcp += 3*(1-dissent); old_middle_kcp += 3*(1-dissent); rural_kcp += 3*(1-dissent); unemployed_kcp += 3*(1-dissent);
 
-As a people's party, we represent women of all classes.
+With a open space to filter political views openly and safely we provide a haven for those who would often be discouraged by the harshness of regular politics.
 
 @campaign_catholics
-title: Campaign among political Catholics.
-on-arrival: catholics_spd += 5*(1-dissent);
+title: Campaign among political regionalists.
+on-arrival: catholics_kcp += 7*(1-dissent);
 
-Catholics have historically been tied to the Center Party, but there is no reason why our party cannot appeal to them. The Prussian Concordat in particular is a sign of our friendship with Catholicism.
+We are increasing our voting share even among the regionalist voters as we now can provide them a geniune and more moderate platform where to air their issues on local cultures and such.
+
+
 
 
