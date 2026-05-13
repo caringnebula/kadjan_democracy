@@ -1,7 +1,7 @@
 title: We must deport Zephyrian spies.
 subtitle: They threathen our republic and inflate support for radical parties.
 unavailable-subtitle: [? if judicial_reform < 2 : Unfortunately, the judiciary will not cooperate. ?]
-view-if:  investigate_far_right > 2
+view-if:  investigate_far_right > 2 and zephyr_deported == 0
 choose-if: kcp_in_goverment == 1
 
 Is it realy this simple? Wont this inflame anger from the radical parties?
