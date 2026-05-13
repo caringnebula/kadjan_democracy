@@ -73,7 +73,7 @@ view-if: budget < wtb_budget and wtb_implemented == 0 and wtb_adopted == 1
 choose-if: unemployed > 8
 on-arrival:  works_program += 1; budget -= wtb_budget; unemployed -= 4; workers += 2; workers_kcp += 8*(1-dissent); unemployed_kcp += 8*(1-dissent); capital_strike_progress += 1; wtb_implemented += 1; up_relation -= 5 if in_left_front; inflation += 3; economic_growth += 3; pro_republic += 3*(1-dissent);
 
-We have entered deficit spending to fund the rapid reconstruction of the city. Annastasia herself covers most of the bill which continues to build a aura of personality around her. Debates will never again be so equal if she can point to the city and remind everyone she paid for it all.
+We have begun reconstruction of Vynaria calling the new city Neu Mont. Yoakumaens are becoming a population in Kaddu and the city is being rebuilt.
 
 [? if in_left_front: Moriarty is very forthcoming and passionate about the Yoakumaen culture. He himself is one of the first to become a Yoakumaen in Kaddu. This wont last. ?]
 
