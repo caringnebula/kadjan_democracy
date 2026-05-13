@@ -28,10 +28,9 @@ on-arrival: resources -= 1; west_relation += 1; reformist_strength += 5; pacifis
 The Amar state is reclusive but Buzzy and the conference offers a way to interact with them and build relations.
 
 @austria
-subtitle: -1 resources [? if austrian_parliament_seen and not austrian_civil_war_seen: - We will also help the Austrians oppose their dictatorship. ?]
+subtitle: -1 resources
 choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
-audio: shuffle music/communist/workers_of_vienna_normalized.mp3
 on-arrival: left_strength += 5; radicalization += 1; rb_militancy += 0.03; resources -= 1; austria_relation += 1; sdapo_strength += 1 if austrian_parliament_seen = 1
 
 We have for long had bad relations with Zephyr but perhaps that could change , they also provide aid to build up organization of our paramilitary troops.
