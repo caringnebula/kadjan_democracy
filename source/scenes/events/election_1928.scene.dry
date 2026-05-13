@@ -194,7 +194,7 @@ There are some potential coalition arrangements.
 title: KCP majority alone
 subtitle: KCP: [+ kcp_r +]%
 view-if: kcp_r >= 50
-on-arrival: leverage +=5 ;chancellor = "Empty"; chancellor_party = "KCP"; kcp_in_government = 1; in_kcp_majority = 1; pro_republic += 5; foreign_minister_party = "KCP"; foreign_minister = "Anovium"; interior_minister_party = "KCP"; interior_minister = "Annastasia"; justice_minister_party = "KCP"; justice_minister = "Enagizer"; labor_minister_party = "KCP"; labor_minister = "Pengu"; reichswehr_minister_party = "I"; reichswehr_minister = "Evarn"; economic_minister_party = "KCP"; economic_minister = "Diumvirate"; finance_minister_party = "KCP"; finance_minister = "Diumvirate"; agriculture_minister_party = "KCP"; agriculture_minister = "Annastasia"; reichswehr_loyalty -= 0.05; 
+on-arrival: leverage +=5 ;chancellor = "Empty"; chancellor_party = "KCP"; kcp_in_government = 1; in_kcp_majority = 1; pro_republic += 5; foreign_minister_party = "KCP"; foreign_minister = "Anovium"; national_defence_minister_party = "KCP"; national_defence_minister = "Duumvirate"; labor_minister_party = "KCP"; labor_minister = "Pengu"; finance_minister_party = "KCP"; finance_minister = "Triumvirate"; infrastructure_minister_party = "KCP"; culture_minister = "Primus" ; culture_minister_party = "KCP" ; infrastructure_minister = "Pengu"; reichswehr_loyalty -= 0.05; 
 
 The KCP assumes its place as the party of natural governance. This place has mostly been earned by the momentum hidden behind the party as the party which helped found the republic.
 
@@ -213,7 +213,7 @@ Annastasia von Yoaken has become chancellor of the KCP majority.
 title: We can form a coalition with the unitarists?.
 subtitle: KCP + UP ([+ left_coalition +]%)
 view-if: left_coalition >= 50
-on-arrival: leverage += 5; in_left_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; interior_minister_party = "KCP"; justice_minister_party = "I"; labor_minister_party = "UP"; reichswehr_minister_party = "I"; economic_minister_party = "UP"; finance_minister_party = "UP"; agriculture_minister_party = "UP"; foreign_minister = "Anovium"; interior_minister = "Anovium"; justice_minister = "Enagizer"; labor_minister = "Moriarty"; reichswehr_minister = "Evarn"; economic_minister = "Moriarty"; finance_minister = "Moriarty"; agriculture_minister = "Moriarty";
+on-arrival: leverage += 5; in_left_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; culture_minister_party = "KCP" ;national_defence_minister_party = "KCP"; labor_minister_party = "UP"; finance_minister_party = "UP"; infrastructure_minister_party = "UP"; foreign_minister = "Anovium"; interior_minister = "Anovium"; labor_minister = "Moriarty"; national_defence_minister = "Evarn"; finance_minister = "Moriarty"; infrastructure_minister = "Moriarty"; culture_minister = "Primus";
 
 We have enough votes to somehow form a coalition with the unitarists.
 
@@ -274,7 +274,7 @@ on-arrival: chancellor = "Tbgoes"; chancellor_party = "HP"
 title: Regionalist-Constitutionalist Coalition
 subtitle: KCP + VNPF ([+ regional_coalition +]%)
 view-if: moderate_plan_progress > 1 and regional_coalition >= 50
-on-arrival: leverage += 5; in_regionalist_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; interior_minister_party = "VNPF"; justice_minister_party = "I"; labor_minister_party = "VNPF"; reichswehr_minister_party = "I"; economic_minister_party = "VNPF"; finance_minister_party = "VNPF"; agriculture_minister_party = "VNPF"; foreign_minister = "Anovium"; interior_minister = "Synthellic"; justice_minister = "Enagizer"; labor_minister = "Synthellic"; reichswehr_minister = "Evarn"; economic_minister = "Synthellic"; finance_minister = "Synthellic"; agriculture_minister = "Synthellic";
+on-arrival: leverage += 5; in_regionalist_coalition = 1; kcp_in_government = 1; foreign_minister_party = "KCP"; national_defence_minister_party = "VNPF"; labor_minister_party = "VNPF"; culture_minister_party = "KCP" ;finance_minister_party = "KCP"; infrastructure_minister_party = "VNPF"; foreign_minister = "Anovium"; national_defence_minister = "Synthellic"; labor_minister = "Guineapig"; economic_minister = "Synthellic"; finance_minister = "KCP Commision"; culture_minister = "KCP Commision";infrastructure_minister = "Guineapig";
 
 Thanks to our traditional reconstruction platform the Vynarian regionalists are open to hearing out our proposals for cooperation.
 
@@ -302,98 +302,73 @@ title: Labor Ministry
 subtitle: Taking the Labor Ministry is expected of us.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 5
+choose-if: leverage >= 15
 view-if: labor_minister_party != "KCP"
-on-arrival: leverage -= 5; labor_minister_party = "KCP"; labor_minister = "Sikas"
+on-arrival: leverage -= 15; labor_minister_party = "KCP"; labor_minister = "Pengu"
 go-to: ministries
 
-Rudolf Wissell of the SPD has been appointed labor minister.
+Pengu Varangus of the KCP has become the minister of labour
 
-@interior
-title: Interior Ministry
-subtitle: Taking the Interior Ministry is expected of us. The Interior Ministry controls domestic security.
+@national_defence
+title: Ministry of National Defence
+subtitle: The Ministry of National Defence is a combined ministry of the army and interior. It is hihgly powerful.
 unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 5
-view-if: interior_minister_party != "KCP"
-on-arrival: leverage -= 5; interior_minister_party = "KCP"; interior_minister = "Annastasia"
+tags: mins_1928        
+choose-if: leverage >= 15
+view-if: national_defence_minister_party != "KCP"
+on-arrival: leverage -= 15; national_defence_minister_party = "KCP"; national_defence_minister = "Duumvirate"
 go-to: ministries
 
-Carl Severing of the SPD has been appointed Interior Minister.
+Annastasia von Yoaken and Anovium take control of the interior ministry together.
 
 @finance
 title: Finance Ministry
-subtitle: The Finance Ministry controls the government budget and taxes.
+subtitle: The Finance Ministry controls the government budget and taxes but also the economic direction.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
-choose-if: leverage >= 10 
+choose-if: leverage >= 15
 view-if: finance_minister_party != "KCP"
-on-arrival: leverage -= 10; finance_minister_party = "KCP"; finance_minister = "Triumvirate"
+on-arrival: leverage -= 15; finance_minister_party = "KCP"; finance_minister = "Triumvirate"
 go-to: ministries
 
-Rudolf Hilferding of the SPD has been appointed Finance Minister.
-
-@economic
-title: Economic Ministry
-subtitle: The Economic Ministry controls broader economic policy.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 10 
-view-if: economic_minister_party != "KCP"
-on-arrival: leverage -= 10; economic_minister_party = "KCP"; economic_minister = "Biglrab"
-go-to: ministries
-
-Robert Schmidt of the SPD has been appointed Economic Minister.
-
-@justice
-title: Justice Ministry
-subtitle: The Justice Ministry controls the courts.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 10 
-view-if: justice_minister_party != "KCP"
-on-arrival: leverage -= 10; justice_minister_party = "KCP"; justice_minister = "Enagizer"
-go-to: ministries
-
-Gustav Radbruch of the SPD has been appointed Justice Minister.
+The Triumvirate of the financial experts of the KCP take control of the finance ministry.
 
 @foreign
 title: Foreign Ministry
-subtitle: This is usually the domain of Gustav Stresemann of the DVP.
-unavailable-subtitle: We do not have enough leverage.
-tags: mins_1928
-choose-if: leverage >= 10 
-view-if: foreign_minister_party != "KCP"
-on-arrival: leverage -= 10; foreign_minister_party = "KCP"; foreign_minister = "Anovium"
-go-to: ministries
-
-Rudolf Breitscheid of the SPD has been appointed Foreign Minister.
-
-
-@agriculture
-title: Agricultural Ministry
-subtitle: This is not our usual domain.
-unavailable-subtitle: We do not have enough leverage.
-choose-if: leverage >= 10 
-view-if: agriculture_minister_party != "KCP"
-on-arrival: leverage -= 10; agriculture_minister_party = "KCP"; agriculture_minister = "Pengu"
-go-to: ministries
-tags: mins_1928
-
-Fritz Baade of the SPD has been appointed Agriculture Minister.
-
-@reichswehr
-title: Reichswehr Ministry
-subtitle: The Ministry responsible for the armed forces is not typically our domain; General Groener and the bourgeois-conservatives will be displeased.
+subtitle: The Foreign Ministry determines the foreign policy of the nation.
 unavailable-subtitle: We do not have enough leverage.
 tags: mins_1928
 choose-if: leverage >= 15 
-view-if: reichswehr_minister_party != "KCP"
-on-arrival: leverage -= 15; reichswehr_minister_party = "KCP"; reichswehr_minister = "Pengu"
+view-if: foreign_minister_party != "KCP"
+on-arrival: leverage -= 15; foreign_minister_party = "KCP"; foreign_minister = "Anovium"
 go-to: ministries
 
-Julius Leber of the SPD has been appointed Reichswehr Minister.
+Anovium takes controll of the foreign ministry.
 
+
+@infrastructure
+title: Ministry of Infrastructure
+subtitle: This is not our usual domain.
+unavailable-subtitle: We do not have enough leverage.
+choose-if: leverage >= 10 
+view-if: infrastructure_minister_party != "KCP"
+on-arrival: leverage -= 15; infrastructure_minister_party = "KCP"; infrastructure_minister = "Pengu"
+go-to: ministries
+tags: mins_1928
+
+Pengu Varangus takes control of the ministry of infrastructure.
+
+@culture
+title: Ministry of Culture
+subtitle: The Ministry of culture is often overlooked however it does control not only culture but also our media and messaging to the public.
+unavailable-subtitle: We do not have enough leverage.
+tags: mins_1928
+choose-if: leverage >= 15 
+view-if: culture_minister_party != "KCP"
+on-arrival: leverage -= 15; culture_minister_party = "KCP"; culture_minister = "Primus"
+go-to: ministries
+
+Magpie is officialy apointed to the ministry but with her refusing the apointment the position practicaly is taken over by the Primus.
 
 
 @no_more
@@ -406,55 +381,55 @@ This coalition arrangement is tolerable to all.
 @drop_labor
 title: Drop the Labor Ministry.
 view-if: labor_minister_party = "KCP"
-on-arrival: labor_minister_party = "UP"; labor_minister = "Moriarty"; leverage += 5;
+on-arrival: labor_minister_party = "UP"; labor_minister = "Moriarty"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
-@drop_interior
+@drop_national_defence
 title: Drop the Interior Ministry.
-view-if: interior_minister_party = "KCP"
-on-arrival: interior_minister_party = "I"; interior_minister = "Independent"; leverage += 5;
+view-if: national_defence_minister_party = "KCP"
+on-arrival: national_defence_minister_party = "I"; national_defence_minister = "Evarn"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_finance
 title: Drop the Finance Ministry.
 view-if: finance_minister_party = "KCP"
-on-arrival: finance_minister_party = "UP"; finance_minister = "Moriarty"; leverage += 10; 
+on-arrival: finance_minister_party = "UP"; finance_minister = "Moriarty"; leverage += 15; 
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_economic
 title: Drop the Economic Ministry.
 view-if: economic_minister_party = "KCP"
-on-arrival: economic_minister_party = "UP"; economic_minister = "Moriarty"; leverage += 10;
-tags: drop_mins_1928
-go-to: ministries
-
-@drop_justice
-title: Drop the Justice Ministry.
-view-if: justice_minister_party = "KCP"
-on-arrival: justice_minister_party = "UP"; justice_minister = "Moriarty"; leverage += 10;
+on-arrival: economic_minister_party = "UP"; economic_minister = "Moriarty"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
 @drop_foreign
 title: Drop the Foreign Ministry.
 view-if: foreign_minister_party = "KCP"
-on-arrival: foreign_minister_party = "UP"; foreign_minister = "Moriarty"; leverage += 10;
+on-arrival: foreign_minister_party = "UP"; foreign_minister = "Moriarty"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
 
-@drop_agriculture
-title: Drop the Agriculture Ministry.
-view-if: agriculture_minister_party = "KCP"
-on-arrival: agriculture_minister_party = "UP"; agriculture_minister = "Yersultan"; leverage += 10; 
+@drop_infrastructure
+title: Drop the Infrastructure Ministry
+view-if: infrastructure_minister_party = "KCP"
+on-arrival: infrastructure_minister_party = "UP"; infrastructure_minister = "Yersultan"; leverage += 15; 
 tags: drop_mins_1928
 go-to: ministries
 
-@drop_reichswehr
-title: Drop the Reichswehr Ministry.
-view-if: reichswehr_minister_party = "KCP"
-on-arrival: reichswehr_minister_party = "I"; reichswehr_minister = "Evarn"; leverage += 15;
+@drop_culture
+title: Drop the Culture Ministry
+view-if: infrastructure_minister_party = "KCP"
+on-arrival: culture_minister_party = "I"; culture_minister = "Culture Commision"; leverage += 15; 
+tags: drop_mins_1928
+go-to: ministries
+
+@drop_national_defence
+title: Drop the National Defence ministry.
+view-if: national_defence_minister_party = "KCP"
+on-arrival: national_defence_minister_party = "I"; national_defence_minister = "Evarn"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
