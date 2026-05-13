@@ -2,7 +2,7 @@ title: Agricultural Policy
 new-page: true
 is-card: true
 on-arrival: agricultural_policy_timer += 6; month_actions += 1
-view-if: kcp_in_government = 1 and (infrastructure_minister_party = "KCP") and (finance_minister_party = "KCP") and agricultural_policy_timer == 0
+view-if: kcp_in_government = 1 and (finance_minister_party = "KCP") and agricultural_policy_timer == 0
 card-image: img/kcp_agriculture_affairs.png
 tags: govt_affairs, cabinet
 #subtitle: Issues of agriculture and our farmers population.
