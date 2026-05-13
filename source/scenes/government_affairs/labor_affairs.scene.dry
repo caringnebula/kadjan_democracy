@@ -4,37 +4,29 @@ is-card: true
 tags: govt_affairs, cabinet
 on-arrival: labor_affairs_timer = 6; month_actions += 1; labor_affairs_seen = 1
 view-if: spd_in_government = 1 and labor_minister_party = "SPD" and labor_affairs_timer = 0 and strike_term_seen = 0
-card-image: img/portraits/WissellRudolf.jpg
+card-image: img/kcp_labor.png
 #subtitle: Addressing labor unrest and strikes.
 
 = Labor Affairs
 
-The industrial Ruhr region is aflame with labor unrest. The employers have started a major lockout to force the workers to take more cuts to wages and benefits.  There is a need for the Labor Ministry to arbitrate in conflicts between employers and workers.
+Labour in Kaddu is mostly governed by trade unions with many of them being non-socialist unions.
 
-- @support_labor: Support labor in their demands.
-- @support_employers: Support the employers in their demands.
-- @balance: Try to strike a compromise between the sides.
+- @support_labor: Support trade unions.
+- @support_employers: Support industries.
 - @easy_discard
 #- @cancel_advisor_action
 
 @support_labor
-subtitle: Popular among the workers, this will alienate the bourgeoisie.
-on-arrival: labor_strength += 5; labor_dissent -= 5; left_dissent -= 5; workers_spd += 6*(1-dissent); coalition_dissent += 1; dvp_relation -= 4; capital_strike_progress += 1 if dvp_relation <= 30; capital_strike_progress += 1 if unemployed > 15; capital_strike_progress += 1 if unemployed > 24; labor_goal_completed += 1; inflation += 0.1; pro_labor += 1; strike_term_seen += 1; economic_growth -= 0.1;
+subtitle: Industries have gonne too far.
+on-arrival: socialist_strength += 5; socialist_dissent -= 5; workers_kcp += 6*(1-dissent);
 
-Supporting labor is always popular in the SPD, although many of our coalition partners represent employers, and they are less enthused.
+We support the labour unions in labour disputes.
 
 @support_employers
-subtitle: Popular among the bourgeoisie, much less so among the workers.
-on-arrival: labor_dissent += 8; workers_spd -= 3; coalition_dissent -= 1 if coalition_dissent > 0; dvp_relation += 5; z_relation += 5; workers_kpd += 3; kpd_coalition_dissent += 1; kpd_relation -= 8; capital_strike_progress -= 1 if capital_strike_progress > 1; capital_strike_progress -= 1 if capital_strike_progress > 8; pro_labor -= 1; strike_term_seen += 1
+subtitle: The workers are going too far.
+on-arrival: socialist_dissent += 8; workers_kcp -= 3; workers_kcp += 3; new_middle_kcp += 7; liberal_strength += 5; liberal_dissent -=3
 
-The more radical workers despise our suppression of their strikes, recalling the days of Friedrich Ebert.
-
-@balance
-subtitle: Both sides need to share the pain in the current crisis.
-on-arrival: labor_dissent += 4; workers_spd -= 2; kpd_coalition_dissent += 1; kpd_relation -= 5; strike_term_seen += 1
-
-Many workers are unhappy at our compromises, but they will learn to accept that we are all in a shared struggle against economic forces.
-
+We support employers in labour disputes influenced by our liberal wing.
 
 
 # options: support the workers in their demands, pushing back against the employers.
