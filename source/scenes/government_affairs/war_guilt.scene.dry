@@ -1,18 +1,17 @@
-title: War Guilt Inquiry
+title: Historical Inquiry
 new-page: true
 is-card: true
 tags: govt_affairs
 on-arrival: war_guilt_timer = 6; month_actions += 1
-view-if: spd_in_government = 1 and war_guilt_timer = 0
-card-image: img/reichstag_1.jpg
+view-if: kcp_in_government = 1 and war_guilt_timer = 0
+card-image: img/KaddianFlag.webp
 max-visits: 1
 
-= Reichstag War Guilt Inquiry
+= Historical Inquiry
 
-The War Guilt Inquiry has been an intermittent Reichstag committee for investigating the causes of the Great War and the German defeat. So far, it has faced massive resistance from the military establishment up to President Hindenburg.
+We have begun a inquiry into the history of Kaddu and the failures of the previous regimes of Kaddu. Many in the party are asking to propagandize the findings while others ask us to stay true to the facts.
 
-- @restart: Restart the inquiry.
-- @root: Do nothing.
+- @restart: Dedice the fate of the inquiry.
 - @easy_discard
 - @cancel_advisor_action
 
@@ -21,14 +20,15 @@ on-arrival: war_guilt += 1
 
 What is the goal of this tribunal?
 
-- @pure_history: To provide a historical record of the events of the war.
-- @rewrite: To revise the popular German histories and finally put to rest the "stabbed in the back" myth.
+- @pure_history: To provide a historical record of Kaddu and why the previous itterations of the nation had failed.
+- @rewrite: Rewrite the history to slander the opposition and create a cult around the party.
 
 @pure_history
+on_arrival: kcp_democracy += 1 
 
 The history is being compiled, as it always has been.
 
 @rewrite
-on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); coup_progress += 1
+on-arrival: pacifism += 1; nationalism -= 5*(1-dissent); pro_republic += 5*(1-dissent); kcp_tyrrany += 1; strife += 1
 
-Destroying the "stabbed in the back" myth, in addition to finally correcting the historical record, would do a great deal to improve our party's reputation. This is why it would be resisted by the military establishment every step of the way.
+We have begun glorifying the Republic and its creators (us) to the point of Annastasia calling herself the mother of the nation. This radicalizes the opposition.
