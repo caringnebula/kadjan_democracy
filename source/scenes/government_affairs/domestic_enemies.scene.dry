@@ -12,14 +12,14 @@ view-if: kcp_in_government = 1 and national_defence_minister_party = "KCP"
 As we have control over the Interior Department, we can direct police and intelligence services to investigate internal enemies. We can proscribe various organizations.
 
 - @deport_hitler
-- @ban_sa: Ban the SA.
-- @unban_sa: Unban the SA.
+- @ban_sa: Ban the regionalist militias
+- @unban_sa: Unban the regionalist militias.
 - @persecute_sa
-- @ban_sh: Ban the Stahlhelm.
-- @unban_sh: Unban the Stahlhelm.
+- @ban_sh: Ban the monarchist militias.
+- @unban_sh: Unban the monarchist militias.
 - @persecute_sh
-- @ban_rfb: Ban the Communist RFB.
-- @unban_rfb: Unban the RFB.
+- @ban_rfb: Ban the workers militias.
+- @unban_rfb: Unban the workers militias.
 - @persecute_rfb
 - @root: Take no action for now.
 
