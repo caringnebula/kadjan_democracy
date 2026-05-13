@@ -29,7 +29,7 @@ We are pushing the idea of devolving the party into wings of internal democracy 
 @support_peoples_party
 choose-if: (humanist_strength + liberal_strength + socialist_strength >= constitutionalist_strength + neoforsvollrist_strength) and peoples_party_support >= 4
 unavailable-subtitle: The opposition is too strong.
-on-arrival: humanist_strength += 15; liberal_strength += 15; socialist_strength += 10; liberal_dissent -= 10; humanist_dissent -= 10; peoples_party = 1; workers_kcp += 12; rural_kcp += 10; new_middle_kcp += 10; old_middle_kcp += 8; catholics_kcp += 8; neoforsvollrist_dissent += 25; constitutionalist_dissent += 20; up_relation += 10; 
+on-arrival: humanist_strength += 15; liberal_strength += 15; socialist_strength += 10; liberal_dissent -= 10; humanist_dissent -= 10; peoples_party = 1; workers_kcp += 12; rural_kcp += 10; new_middle_kcp += 10; old_middle_kcp += 8; catholics_kcp += 8; neoforsvollrist_dissent += 25; constitutionalist_dissent += 20; up_relation += 10; kcp_democracy += 1;
 
 In a emergency party conference it is declared that we are now a party for all people of Kaddu to act as their democracy with debate and inter wing competition being expressly encouraged. Our opponents critizice this as a attempt of the KCP to become the senate some however nod along with agreement. 
 
