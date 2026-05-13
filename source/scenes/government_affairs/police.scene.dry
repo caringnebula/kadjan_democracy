@@ -4,7 +4,7 @@ is-card: true
 tags: govt_affairs, cabinet
 on-arrival: police_timer += 6; month_actions += 1
 view-if: kcp_in_government = 1 and national_defence_minister_party = "KCP" and police_timer <= 0
-card-image: img/portraits/SeveringCarl.jpg
+card-image: img/kcp_police.png
 
 = Internal Security
 
