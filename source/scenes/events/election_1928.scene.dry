@@ -422,14 +422,7 @@ go-to: ministries
 
 @drop_culture
 title: Drop the Culture Ministry
-view-if: infrastructure_minister_party = "KCP"
+view-if: culture_minister_party = "KCP"
 on-arrival: culture_minister_party = "I"; culture_minister = "Culture Commision"; leverage += 15; 
-tags: drop_mins_1928
-go-to: ministries
-
-@drop_national_defence
-title: Drop the National Defence ministry.
-view-if: national_defence_minister_party = "KCP"
-on-arrival: national_defence_minister_party = "I"; national_defence_minister = "Evarn"; leverage += 15;
 tags: drop_mins_1928
 go-to: ministries
