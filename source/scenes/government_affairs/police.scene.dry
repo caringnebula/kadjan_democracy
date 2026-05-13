@@ -29,7 +29,7 @@ Current interior police loyalty: [+ interior_police_loyalty : loyalty +]
 go-to: investigate_far_right_success if interior_police_loyalty >= 0.55; investigate_far_right_failure if interior_police_loyalty < 0.55
 
 @investigate_far_right_success
-on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_vnpf -= 3; new_middle_vnpf -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_vnpf -= 3 if investigate_far_right == 3; new_middle_vnpf -= 3 if investigate_far_right == 3; old_middle_vnpf -= 3 if investigate_far_right == 3; unemployed_kcp -= 3 if investigate_far_right == 3; zephyr_plot_seen = 1 if investigate_far_right == 4;
+on-arrival: investigate_far_right += 1; sa_strength -= 20; workers_vnpf -= 3; new_middle_vnpf -= 3; nazi_urgency += 1 if investigate_far_right == 2; nazi_urgency += 2 if investigate_far_right == 3; workers_vnpf -= 3 if investigate_far_right == 3; new_middle_vnpf -= 3 if investigate_far_right == 3; old_middle_vnpf -= 3 if investigate_far_right == 3; unemployed_kcp -= 3 if investigate_far_right == 3; zephyr_plot_seen += 1 if investigate_far_right == 4;
 
 [? if investigate_far_right == 1 : We have begun investigating the outside forces meddling in our republic. ?]
 [? if investigate_far_right == 2 : We have noticed a significant ammount of fake citizenships given out to Zephyrian citizens which always support opposition parties.. ?]
