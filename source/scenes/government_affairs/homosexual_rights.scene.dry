@@ -21,7 +21,7 @@ Our queer community is rather small compared to some other change and thus requi
 
 @reform_183
 subtitle: We have discovered the Zephyrian plot to poison our water with Estrogen. We must remove it. Wait did I say remove it? I meant dump more silly.
-view-if: zephyr_plot_seen == 1 or if investigate_far_right == 4
+view-if:  investigate_far_right == 4
 on-arrival: kcp_gay += 1
 
 We dump estrogen into our water supply. Time will tell what this means...
