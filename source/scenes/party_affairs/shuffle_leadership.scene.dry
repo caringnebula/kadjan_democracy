@@ -41,6 +41,15 @@ go-to: rm_main
 
 Annastasia has been removed as a advisor. The constitutionalists disapprove.
 
+@remove_iketh
+title: Remove Iketh
+view-if: iketh_advisor = 1
+tags: remove_advisor
+on-arrival: iketh_advisor = 0; humanist_dissent += 5; n_advisors -= 1
+go-to: rm_main
+
+Iketh has been removed as a advisor. The humanists disapprove.
+
 ####################### adding advisors
 
 @add_advisors
