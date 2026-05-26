@@ -26,7 +26,7 @@ We have reduced the strength of the dissident wings of the party.
 
 @finance_ministry_
 title: Fiscal Policy
-subtitle: As Finance Minister, Hilferding can enact tax policies.
+subtitle: As a expert on finance and liberal thinker Iketh can sway the ministry to enact his ideas.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?] [? if kcp_in_government = 0 : KCP not in government: ?] [? if finance_minister_party != "KCP" : The KCP does not control the finance ministry. ?]
 choose-if: advisor_action_timer == 0 and kcp_in_government == 1 and finance_minister_party == "KCP"
 on-arrival: advisor_action_timer = 6; fiscal_policy_timer -= 6; last_advisor_action = 1
