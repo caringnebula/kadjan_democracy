@@ -15,18 +15,18 @@ Annastasia is one of the founders of our party and is widely respected for her w
 - @root: Return to main
 
 @support_peoples_party
-title: Build support for a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: Build support for the democratization of the party
+subtitle: Can we expand our party electorate?
 view-if: peoples_party = 0
 choose-if: peoples_party_support <= 4 and advisor_action_timer = 0 and peoples_party = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support > 4: There is already substantial support for a People's Party. ?]
 on-arrival: advisor_action_timer = 6; peoples_party_support += 1; reformist_strength += 5;
 
-We are building up support for the idea of a People's Party.
+We are building up support for the idea of a Citizen Society.
 
 @build_peoples_party
-title: Building a People's Party
-subtitle: Can we expand our party beyond the industrial working class?
+title: Building a prototype of a Citizen Society.
+subtitle: Can we finaly realize the prototype of a democratic , open citizens society?
 view-if: peoples_party = 0
 choose-if: peoples_party_support >= 3 and advisor_action_timer = 0
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if peoples_party_support < 3: There is not enough support for this policy within the party. ?]
