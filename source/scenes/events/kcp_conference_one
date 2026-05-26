@@ -1,0 +1,24 @@
+title: First party Conference
+subtitle: The first open debate/conference of our party. 
+tags: event, govt_affairs
+is-card: true
+on-arrival: kcp_conference_seen = 1
+face-image: img/kcp_conference.png
+view-if: kcp_conference_seen = 0 and year = 1928 and month >= 3 
+new-page: true
+
+= Conference
+  
+  The first conference was called to suitably discuss our partys platform , views and ideaology. All is progressing well with a open debate from many of the party factions. It is however during this debate that due to a right-ward economicaly liberal turn of the party vision that Moriarty of the Unitarist Party involves himself in the debate defending his views fervently and trying to convince the party of socialism. He is told that this is not his party meeting and if he will not remain silent he must leave to which Moriarty decries foul play and continues to interupt the party meeting until he is forcibly removed from the meeting. At this point he heads to the local bar where he spreads rumours that in actuality this new small still named (Forsvollrist party) party is planning a coup and insurrection against the goverment. We soon find our meeting interupted once more , this time by police forces , civil servants and goverment officials demanding to know what is going on. When it is revealed what truly happened Moriarty finds his reputation tarnished and many of his former members flock to our party (Which in this congress promises to rename itself later becoming the Kadjan Constitutionalist Party) 
+  
+- @vote_yes: Allow them into the party as a boon against the Unitarists even if it means allowing socialists into our party.
+- @vote_no: We will not become some leftist party of the establishment! They shall not enter!
+
+@vote_yes
+on-arrival: socialist_dissent -= 10; workers_up -= 10; new_middle_up -= 10; old_middle_up -= 10; rural_up -= 20; catholic_up -= 20; anovium_advisor = 1
+
+We allow many former Unitarists leave the dying party boosting out electoral prospects even if it means dilluting the party and allowing socialists in. Anovium the current interim president has joined the party himself. This will be a great boon for sure but some say he only joined after Annastasia promised him the presidency nomination.
+
+@vote_no
+on-arrival: up_relation += 10
+chose-if: we_wont_do_this = 0
