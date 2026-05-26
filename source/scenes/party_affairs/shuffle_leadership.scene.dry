@@ -21,7 +21,7 @@ Removing advisors will increase dissent from their faction of the party, while s
 
 @rm_main
 title: Remove advisors.
-tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_advisor, nonfactional_advisor 
+tags: socialist_advisor, humanist_advisor, liberal_advisor, constitutionalist_advisor, neoforsvollrist_advisor, nonfactional_advisor 
 frequency: 1
 
 - #remove_advisor
@@ -290,11 +290,11 @@ tags: center_advisor, left_advisor, reformist_advisor, labor_advisor, neorev_adv
 frequency: 1
 
 
-- @centrist: Add Centrists
-- @left: Add Leftists
-- @reformist: Add Reformists
-- @labor: Add Labor
-- @neorev: Add Neorevisionists
+- @centrist: Add Socialists
+- @left: Add Humanists
+- @reformist: Add Liberals
+- @labor: Add Constitutionalists
+- @neorev: Add NeoForsvollrists
 - @nonfactional: Add non-factional advisors
 - @rm_main: Remove advisors instead.
 - @remove_none: Stop changing advisors.
@@ -302,44 +302,44 @@ frequency: 1
 @centrist
 view-if: n_advisors < 3
 
-- #center_advisor
+- #socialist_advisor
 
 @reformist
 view-if: n_advisors < 3
 
-- #reformist_advisor
+- #humanist_advisor
 
 @left
 view-if: n_advisors < 3
 
-- #left_advisor
+- #liberal_advisor
 
 @labor
 view-if: n_advisors < 3
 
-- #labor_advisor
+- #constitutionalist_advisor
 
 @neorev
-view-if: neorevisionism > 0 and n_advisors < 3
+view-if: n_advisors < 3
 
-- #neorev_advisor
+- #neoforsvollrist_advisor
 
 @nonfactional
 view-if: n_advisors < 3
 
 - #nonfactional_advisor
 
-@add_hilferding
-title: Rudolf Hilferding
-subtitle: Rudolf Hilferding is an economist and one of our chief Marxist theoreticians. {!<br><br>!}[? if difficulty < 0 : Actions - Against Right and Left, Defending Toleration, Fiscal Policy, Economic Democracy ?]
+@add_annastasia
+title: Annastasia von Yoaken
+subtitle: Annastasia is one of the founders of our party and is widely respected for her work on writing the constitution however some of her critics accuse her of building a cult of personality and a machiavellian like persona.
 is-card: true
-card-image: img/portraits/HilferdingRudolf.jpg
-tags: center_advisor
-view-if: hilferding_advisor = 0 and n_advisors < 3 and centrists_resign = 0
-on-arrival: hilferding_advisor = 1; n_advisors += 1
+card-image: img/portraits/Annastasia_Youken_poster.png
+tags: constitutionalist_advisor
+view-if: annastasia_advisor = 0 and n_advisors < 3 and centrists_resign = 0
+on-arrival: annastasia_advisor = 1; n_advisors += 1
 go-to: advisor_menu
 
-Rudolf Hilferding is now an advisor.
+Annastasia Yoaken is now our advisor.
 
 @add_wels
 title: Otto Wels
