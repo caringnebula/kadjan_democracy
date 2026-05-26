@@ -2,7 +2,7 @@ title: Iketh Forsvollr
 is-pinned-card: true
 tags: advisor, humanist
 card-image: img/portraits/iketh_portrait.jpg
-view-if: hilferding_advisor = 1
+view-if: iketh_advisor = 1
 new-page: true
 #face-image: img/portraits/iketh_portrait.jpg
 
