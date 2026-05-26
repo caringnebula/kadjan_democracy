@@ -499,8 +499,9 @@ Q.march_on_berlin_timer = 0;
 
 // all the initial advisors are centrists.
 Q.annastasia_advisor = 1 // Annastasia von Yoaken
-
+Q.muller_advisor = 0
 Q.iketh_advisor = 1 // Iketh Forsvollr
+Q.hilferding_advisor = 0
 
 !}
 set-bg: img/map_2.jpg
