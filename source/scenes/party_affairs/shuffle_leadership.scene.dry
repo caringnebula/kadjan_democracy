@@ -115,12 +115,16 @@ go-to: advisor_menu
 
 Annastasia Yoaken is now our advisor.
 
-@add_iketh
+@add_annastasia
 title: Iketh Forsvollr
 subtitle: Iketh Forsvollr is a humanist liberal-leaning politician who has been in almost every goverment since the Kaddian Empire. He is mostly intrested in liberal economic policies and humanist policies. He is wary of radicalism.
 is-card: true
-card-image: img/portraits/iketh_advisor.jpg
+card-image: img/portraits/iketh_portrait.jpg
 tags: humanist_advisor
-view-if: iketh_advisor = 0 and n_advisors < 3 and humanists_walkout
+view-if: iketh_advisor = 0 and n_advisors < 3 
+on-arrival: iketh_advisor = 1; n_advisors += 1
+go-to: advisor_menu
+
+Iketh is now our advisor.
 
 
