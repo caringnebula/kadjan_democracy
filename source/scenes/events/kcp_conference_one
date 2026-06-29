@@ -2,10 +2,10 @@ title: First party Conference
 subtitle: The first open debate/conference of our party. 
 tags: event, govt_affairs
 is-card: true
-on-arrival: kcp_conference_seen = 1
 face-image: img/kcp_conference.png
-view-if: kcp_conference_seen = 0 and year = 1928 and month >= 4
+view-if: year = 1928 and month >= 4
 new-page: true
+max-visits: 1
 
 = Conference
   
