@@ -1,10 +1,11 @@
-title: First party Conference
+title: First party conference
 new-page: true
-subtitle: The first open debate/conference of our party. 
-face-image: img/kcp_conference.png
-view-if: year = 1928 and (month = 4)
-new-page: true
+subtitle: The first of our open party conferences
+view-if: year = 1928 and month = 4
 max-visits: 1
+on-arrival: party_conference_one = 1
+tags: event
+#face-image: img/kcp_conference.png
 
 = Conference
   
