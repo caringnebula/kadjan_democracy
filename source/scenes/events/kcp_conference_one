@@ -2,7 +2,7 @@ title: First party Conference
 subtitle: The first open debate/conference of our party. 
 new-page: true
 face-image: img/kcp_conference.png
-view-if: year = 1928 and month >= 4
+view-if: year = 1928 and month = 3
 new-page: true
 max-visits: 1
 
